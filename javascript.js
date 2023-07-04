@@ -1,5 +1,3 @@
-let computerSelection = '';
-let playerSelection = '';
 let winner = '';
 let playerCount = 0;
 let computerCount = 0;
@@ -20,8 +18,8 @@ function getPlayerChoice() {
 
 //function playRound will play a single round of Rock Paper Scissors. playerSelection assigned via getPlayerChoice func, computerSelection assigned via getComputerChoice func.
 function playRound () {
-    playerSelection = getPlayerChoice();
-    computerSelection = getComputerChoice();
+    let playerSelection = getPlayerChoice();
+    let computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         winner = `It's a draw, both drew ${playerSelection}!`
     } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
