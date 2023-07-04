@@ -57,13 +57,13 @@ function playGame(){
     console.log('------------------');
     console.log('END OF GAME');
     if (playerCount > computerCount) {
-        console.log('Player won');
+        console.log(`Player won with total wins: ${playerCount} vs Computer's total wins: ${computerCount}`);
     }
     if (playerCount < computerCount) {
-        console.log('Computer won');
+        console.log(`Computer won with total wins: ${computerCount} vs Player's total wins: ${playerCount}`);
     }
     if (playerCount === computerCount) {
-        console.log('Draw!');
+        console.log(`Draw! Computer total wins: ${computerCount} vs Player's total wins: ${playerCount}`);
     }
 }
 
