@@ -41,7 +41,7 @@ function playRound () {
         winner = `Computer wins with ${computerSelection} vs Player's ${playerSelection}!`;
         computerCount++;
     } else {
-        winner = 'There must have beenb a typo here!';
+        winner = 'There must have been a typo here!';
     }
     return winner;
 }
