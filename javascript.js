@@ -16,7 +16,7 @@ function getPlayerChoice() {
     return playerSelection;
 }
 
-//function playRound will play a single round of Rock Paper Scissors. playerSelection assigned via getPlayerChoice func, computerSelection assigned via getComputerChoice func.
+//function playRound will play a single round of Rock Paper Scissors. playerSelection assigned via getPlayerChoice func, computerSelection assigned via getComputerChoice func. counts incremented.
 function playRound () {
     let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
@@ -46,7 +46,7 @@ function playRound () {
     return winner;
 }
 
-//playGame will loop through 5 rounds of playRound func. winner of round returned and printed. playerCount / computerCount incremented and logged. end of for loop end of game comparison.
+//playGame will loop through 5 rounds of playRound func. winner of round returned and printed. playerCount / computerCount logged. end of for loop end of game comparison.
 function playGame(){
     for (let i = 1; i<6; i++) {
         console.log('Round number ' + (i));
