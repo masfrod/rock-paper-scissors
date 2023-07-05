@@ -11,9 +11,12 @@ function getComputerChoice () {
 //function getPlayerChoice will prompt input for RPS value. convert to lower case. convert 1st character to upper case. and return player value.
 function getPlayerChoice() {
     playerSelection = prompt('Play by entering: "Rock", "Paper", or "Scissors"');
-    playerSelection = playerSelection.toLowerCase();
-    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
-    return playerSelection;
+    if (playerSelection !== null) {
+        playerSelection = playerSelection.toLowerCase();
+        playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+        return playerSelection;
+    }
+    console.log('failed to enter prompt / quit the game');  
 }
 
 //function playRound will play a single round of Rock Paper Scissors. playerSelection assigned via getPlayerChoice func, computerSelection assigned via getComputerChoice func. counts incremented.
@@ -59,10 +62,10 @@ function playGame(){
     if (playerCount > computerCount) {
         console.log(`Player won with total wins: ${playerCount} vs Computer's total wins: ${computerCount}`);
     }
-    if (playerCount < computerCount) {
+    else if (playerCount < computerCount) {
         console.log(`Computer won with total wins: ${computerCount} vs Player's total wins: ${playerCount}`);
     }
-    if (playerCount === computerCount) {
+    else if (playerCount === computerCount) {
         console.log(`Draw! Computer total wins: ${computerCount} vs Player's total wins: ${playerCount}`);
     }
 }
